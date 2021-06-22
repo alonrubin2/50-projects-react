@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { useEffect, useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import {
+  Switch,
+  Route,
+} from 'react-router-dom';
+import ExpandingCrads from './ExpandingCards/ExpandingCrads';
+import Landing from './Landing/Landing';
 
 function App() {
+
+
+
+  const history = useHistory();
+
+  useEffect(() => {
+    history.push('/landing');
+  }, [history]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+      <Switch>
+        <Route path="/expandingcards">
+          <ExpandingCrads />
+        </Route>
+        <Route path="/">
+          <Landing />
+        </Route>
+      </Switch>
+
     </div>
   );
 }
