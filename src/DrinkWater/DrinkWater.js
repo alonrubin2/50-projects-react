@@ -19,6 +19,14 @@ const DrinkWater = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
+        if (value > 12) {
+            alert("We Don't Reccomend You Drink This Amount Of Water")
+            return;
+        }
+        else if (value <= 1) {
+            alert("We Don't Reccomend You Drink This Amount Of Water")
+            return;
+        }
         setLiters(value);
         setValue('');
     }
