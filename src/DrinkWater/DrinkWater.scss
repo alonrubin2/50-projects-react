@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+// GLOBAL
+:root {
+    --border-color: #0e3991;
+    --fill-color: #6ab3f8;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.DrinkWater {
+    font-family: 'poppins', sans-serif;
+    background-color: #2d85cc;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100vw;
+}
+
+.small-cup-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 260px;
+    text-align: center;
+    border-radius: 5px;
+    border: 0;
+    height: 40px;
+    font-size: 18px;
+}
+input:focus {
+    outline: none;
+}
+
+// TYPOGRAPHY
+h1 {
+    margin: 10px 0 0;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 400;
+    margin: 10px 0;
+    letter-spacing: .2em;
+}
+
+.text {
+    text-align: center;
+    margin: 0 0 5px;
+}
+
+// CUPS 
+//      --- EMPTY
+
+
+
+
+.cups {
+    display: flex;
+    flex-wrap: wrap;
+    width: 285px;
+    align-items: center;
+    justify-content: center;
+}
+
+// CUPS 
+//      --- FULL
+
+.cup.cup-small.full {
+    background-color: var(--fill-color);
+    color: #fff;
+}
+
+
+// BIG CUP
+
+.remained {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    transition: .3s ease;
+}
+
+.remained span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.remaind small {
+    font-size: 12px;
+}
+
+.precentage {
+    background-color: var(--fill-color);
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    transition: .3s ease;
+}

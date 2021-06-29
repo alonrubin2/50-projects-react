@@ -1,17 +1,21 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import './Landing.scss';
+import SpecialButton from './SpecialButton/SpecialButton';
 
 const Landing = () => {
 
-    const history = useHistory();
-    
+    const pages = [
+        {title: 'Expanding Cards', url: '/expandingcards'},
+        {title: 'Drink Water', url: '/drinkwater'},
+
+    ];    
 
     return (
         <div className="Landing">
-            <button onClick={(e) => history.push("/expandingcards")}>
-                Expanding Cards
-            </button>
+            {pages.map((page) => {
+                return <SpecialButton title={page.title} url={page.url}/>
+            })}
+            
         </div>
     );
 }

@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import ExpandingCrads from './ExpandingCards/ExpandingCrads';
 import Landing from './Landing/Landing';
+import DrinkWater from './DrinkWater/DrinkWater';
 
 function App() {
 
@@ -25,6 +26,9 @@ function App() {
       <Switch>
         <Route path="/expandingcards">
           <ExpandingCrads />
+        </Route>
+        <Route path="/drinkwater">
+          <DrinkWater />
         </Route>
         <Route path="/">
           <Landing />

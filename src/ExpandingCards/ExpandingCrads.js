@@ -13,6 +13,7 @@ const ExpandingCrads = () => {
         { title: "Desserts", source: '../assets/expanding-cards-imgs/dessertpano.jpg' },
         { title: "Desserts and seas", source: '../assets/expanding-cards-imgs/dessertandsea.jpg' },
         { title: "Costal Towns", source: '../assets/expanding-cards-imgs/coastaltown.jpg' },
+        
     ]
 
 

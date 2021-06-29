@@ -2,6 +2,7 @@ this project is a translation project.
 
 
 I've started a course in Udemy which titled "50 Projects in 50 Days" by Brad Trasersy
+
 {{{
     the link to the course - https://www.udemy.com/course/50-projects-50-days/
 
