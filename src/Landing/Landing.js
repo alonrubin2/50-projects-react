@@ -7,6 +7,9 @@ const Landing = () => {
     const pages = [
         {title: 'Expanding Cards', url: '/expandingcards'},
         {title: 'Drink Water', url: '/drinkwater'},
+        {title: 'Movie Search', url: '/movies'},
+        {title: 'Try Out This Button', url: '#'},
+
 
     ];    
 

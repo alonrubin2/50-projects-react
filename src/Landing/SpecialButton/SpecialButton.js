@@ -22,7 +22,7 @@ const SpecialButton = ({ title, url }) => {
         setLeft(xInside);
         setTop(yInside);
         setIsShown(true)
-        setTimeout(() => setIsShown(false), 500);
+        setTimeout(() => setIsShown(false), 400);
     }
 
     function navigate(link) {

@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SmallCup.scss';
 
-const SmallCup = ({amount}) => {
+const SmallCup = ({ key, amount }) => {
 
-    
+
+    const [isFull, setIsFull] = useState(true)
+    const [fullClass, setFullClass] = useState('')
+
+    function fillCup() {
+        setIsFull(!isFull);
+        if (isFull) {
+            setFullClass('full');
+            return;
+        }
+        setFullClass('');
+    }
+
+
     return (
-        <div className="SmallCup">
-            <div>250 ml</div>
+        <div onClick={fillCup} key={key} className={`cup-small ${fullClass}`}>
+            <div>{amount}</div>
         </div>
     );
 }

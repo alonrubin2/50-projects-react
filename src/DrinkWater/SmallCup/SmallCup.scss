@@ -1,4 +1,4 @@
-.SmallCup {
+.cup-small {
 	width: 50px;
 	height: 95px;
 	border-radius: 0 0 15px 15px;
@@ -13,6 +13,11 @@
 	margin: 5px;
 	transition: 0.3s ease;
 }
-.SmallCup div {
+.cup-small div {
     margin-top: 20px;
+}
+
+.cup-small.full {
+    background-color: var(--fill-color);
+    color: #fff;
 }

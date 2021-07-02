@@ -1,0 +1,66 @@
+$primary-color: #22254b;
+$secondary-color: #373b69;
+
+* {
+	box-sizing: border-box;
+}
+
+.movies-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+
+}
+
+.header-container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 8%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $secondary-color;
+}
+
+.search {
+	background-color: transparent;
+	border: 2px solid $primary-color;
+	border-radius: 50px;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+    color: #fff;
+    text-align: left;
+    margin-right: 15px;
+}
+
+.search:focus,
+.search:hover {
+	outline: none;
+	background-color: $primary-color;
+	border-radius: 50px;
+}
+
+.search::placeholder {
+	color: #7378c5;
+}
+
+.Movies {
+    background-color: $primary-color;
+    background-size: cover;
+	font-family: "poppins", sans-serif;
+	width: 100vw;
+	// height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	// width: 100%;
+	justify-content: center;
+    margin: 0;
+    position: absolute;
+    top: 8%;
+    left: 0;
+}

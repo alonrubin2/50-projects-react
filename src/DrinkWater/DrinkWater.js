@@ -8,14 +8,15 @@ const DrinkWater = () => {
     const [liters, setLiters] = useState('');
     const [value, setValue] = useState('')
 
-    const cup = { amount: '250 ml' };
+
+    let cup = {amount: '250 ml'};
     const cups = [];
 
     for (let i = 0; i < (liters * 4); i++) {
         cups.push(cup);
     }
 
-
+// console.log()
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -30,6 +31,8 @@ const DrinkWater = () => {
         setLiters(value);
         setValue('');
     }
+
+    
 
     return (
         <div className='DrinkWater'>
@@ -53,8 +56,8 @@ const DrinkWater = () => {
             */}
             <h3>How Much Did You Already Drink?</h3>
             <div className="small-cup-container">
-                {cups.map((cup) => {
-                    return <SmallCup />
+                {cups.map((cup, index) => {
+                    return <SmallCup amount={cup.amount} key={index} />
                 })}
             </div>
 
