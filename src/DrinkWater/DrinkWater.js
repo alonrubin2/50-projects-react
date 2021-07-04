@@ -6,17 +6,35 @@ import SmallCup from './SmallCup/SmallCup';
 const DrinkWater = () => {
 
     const [liters, setLiters] = useState('');
-    const [value, setValue] = useState('')
+    const [value, setValue] = useState('');
+    // const [isFull, setIsFull] = useState(true);
+    const [fullClass, setFullClass] = useState('');
+    // const [cups, setCups] = useState([]);
 
 
-    let cup = {amount: '250 ml'};
-    const cups = [];
+   // need to figure it out!
 
-    for (let i = 0; i < (liters * 4); i++) {
-        cups.push(cup);
+
+    // useEffect(() => {
+    //     renderCups();
+    // }, []);
+    
+    // function renderCups() {
+
+    //     for (let i = 0; i < (liters * 4); i++) {
+    //         const cup = { amount: '250 ml', isFull: false };
+    //         setCups([...cups, cup]);
+    //     }
+    // }
+
+    const cup = { amount: '250 ml', isFull: false };
+    let cups = [];
+
+    for (let i = 0; i < (liters*4); i++) {
+        cups.push(cup); 
     }
 
-// console.log()
+    console.log(cups)
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -30,9 +48,33 @@ const DrinkWater = () => {
         }
         setLiters(value);
         setValue('');
+        // renderCups();
     }
 
-    
+    // function fillCup(cupIndex) {
+    //     // setIsFull(!isFull);
+    //     let array = [];
+    //     if (fullClass === '') {
+    //         for (let i = cupIndex; i > 0; i--) {
+    //             // if ()
+    //             array.push(cups[cupIndex].isFull = true)
+    //             return;
+    //         }
+    //     }
+    //     cups[cupIndex].isFull = false;
+    // }
+
+    function fillCup(cupIndex) {
+        if (fullClass === '') {
+            setFullClass('full')
+            return;
+        }
+        else {
+            setFullClass('');
+        }
+    }
+
+
 
     return (
         <div className='DrinkWater'>
@@ -57,7 +99,8 @@ const DrinkWater = () => {
             <h3>How Much Did You Already Drink?</h3>
             <div className="small-cup-container">
                 {cups.map((cup, index) => {
-                    return <SmallCup amount={cup.amount} key={index} />
+
+                    return <SmallCup fillCup={fillCup} fullGlass={fullClass} amount={cup.amount} cupKey={index} />
                 })}
             </div>
 
