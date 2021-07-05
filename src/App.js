@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import Login from './Login/Login'
 import ExpandingCrads from './ExpandingCards/ExpandingCrads';
 import Landing from './Landing/Landing';
 import DrinkWater from './DrinkWater/DrinkWater';
@@ -17,7 +18,7 @@ function App() {
   const history = useHistory();
 
   useEffect(() => {
-    history.push('/landing');
+    history.push('/login');
   }, [history]);
 
   return (
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route path="/movies">
           <Movies />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="/">
           <Landing />
