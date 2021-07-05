@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../contexts/UserContext';
 import './Login.scss';
 
 const Login = () => {
 
     const history = useHistory();
+    const { user, setUser } = useContext(UserContext);
 
     const [isChecked, setIsChecked] = useState(false);
     const [isClicked, setIsClicked] = useState(true);
@@ -22,6 +24,11 @@ const Login = () => {
         }
     }
 
+    const handleSubmit = () => {
+        setUser(value);
+        console.log(value);
+        history.push('/landing')
+    }
 
 
 
@@ -55,7 +62,7 @@ const Login = () => {
 
                 {
                     hasValue && isChecked ?
-                        <button onClick={() => history.push('/landing')} className="btn">Login</button>
+                        <button onClick={handleSubmit} className="btn">Login</button>
                         : <button className="btn" disabled>Login</button>
                 }
 

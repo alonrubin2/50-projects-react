@@ -25,6 +25,12 @@
     justify-content: center;
     min-height: 100%;
     width: 100vw;
+    top: 8%;
+    position: relative;
+}
+
+form {
+    margin-top: 6em;
 }
 
 .small-cup-container {
@@ -48,17 +54,36 @@ input:focus {
 }
 
 // TYPOGRAPHY
+
+.headlines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 h1 {
-    margin: 10px 0 0;
+    margin:0;
     letter-spacing: .5em;
     text-transform: uppercase;
 }
 
 h3 {
     font-weight: 400;
-    margin: 10px 0;
+    // margin: 10px 0;
     letter-spacing: .2em;
 }
+
+h1 + h3,
+h1 > h3 {
+    top: 3em;
+    position: absolute;
+
+}
+
 
 .text {
     text-align: center;

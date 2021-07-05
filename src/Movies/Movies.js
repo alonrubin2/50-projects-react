@@ -37,8 +37,8 @@ const Movies = () => {
     return (
         <div className="movies-contianer">
             <div className="header-container">
-                <header>
-                    <form onSubmit={(e) => handleSubmit(e)}>
+                <header className="movie-header">
+                    <form className="movie-form" onSubmit={(e) => handleSubmit(e)}>
                         <input onChange={(e) => setValue(e.target.value)} type="text" value={value} className="search" placeholder="Search" />
                     </form>
                 </header>

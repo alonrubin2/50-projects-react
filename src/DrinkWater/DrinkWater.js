@@ -12,13 +12,13 @@ const DrinkWater = () => {
     // const [cups, setCups] = useState([]);
 
 
-   // need to figure it out!
+    // need to figure it out!
 
 
     // useEffect(() => {
     //     renderCups();
     // }, []);
-    
+
     // function renderCups() {
 
     //     for (let i = 0; i < (liters * 4); i++) {
@@ -30,8 +30,8 @@ const DrinkWater = () => {
     const cup = { amount: '250 ml', isFull: false };
     let cups = [];
 
-    for (let i = 0; i < (liters*4); i++) {
-        cups.push(cup); 
+    for (let i = 0; i < (liters * 4); i++) {
+        cups.push(cup);
     }
 
     console.log(cups)
@@ -78,10 +78,10 @@ const DrinkWater = () => {
 
     return (
         <div className='DrinkWater'>
-
-            <h1>Drink Water</h1>
-            <h3>Goal: {liters} Liters</h3>
-
+            <div className="headlines">
+                <h1>Drink Water</h1>
+                <h3>Goal: {liters} Liters</h3>
+            </div>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <input type="text"
                     value={value}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './Landing.scss';
 import SpecialButton from './SpecialButton/SpecialButton';
 
@@ -9,8 +9,6 @@ const Landing = () => {
         {title: 'Drink Water', url: '/drinkwater'},
         {title: 'Movie Search', url: '/movies'},
         {title: 'Try Out This Button', url: '#'},
-
-
     ];    
 
     return (
