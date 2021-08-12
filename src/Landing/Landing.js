@@ -9,7 +9,6 @@ const Landing = () => {
         { title: 'Drink Water', url: '/drinkwater' },
         { title: 'Movie Search', url: '/movies' },
         { title: 'Click Me!', url: '#' },
-
     ];
 
     return (
